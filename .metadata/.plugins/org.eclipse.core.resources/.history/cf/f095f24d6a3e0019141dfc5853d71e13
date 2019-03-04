@@ -1,0 +1,5 @@
+package com.edwin.backendquiro.models.entity;
+
+public class Cliente {
+
+}
