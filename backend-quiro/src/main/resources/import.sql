@@ -51,3 +51,9 @@ INSERT INTO `users` (username, password, enabled) VALUES ('admin','$2a$10$DOMDxj
 INSERT INTO `authorities` (user_id, authority) VALUES (1,'ROLE_USER');
 INSERT INTO `authorities` (user_id, authority) VALUES (2,'ROLE_ADMIN');
 INSERT INTO `authorities` (user_id, authority) VALUES (2,'ROLE_USER');
+
+
+INSERT INTO empleados  (nombre, apellido, email, telefono, create_at) VALUES ('Edwin','Villa', 'eledwin@gmail.com', '954777777', '2017-08-23');
+INSERT INTO empleados  (nombre, apellido, email, telefono, create_at) VALUES ('Fran','Rivera', 'rivera@gmail.com', '954555555', '2019-01-23');
+INSERT INTO empleados  (nombre, apellido, email, telefono, create_at) VALUES ('Laura','García', 'laura@gmail.com', '954777777', '2018-02-23');
+INSERT INTO empleados  (nombre, apellido, email, telefono, create_at) VALUES ('Vanessa','Pérez', 'vane@gmail.com', '954111111', '2019-02-20');

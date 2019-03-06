@@ -35,14 +35,14 @@ public class Empleado implements Serializable {
 	private Date createAt;
 
 
-	@Column(length = 60)
-	private String password;
-
-	private Boolean enabled;
-
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "user_id")
-	private List<Role> roles;
+//	@Column(length = 60)
+//	private String password;
+//
+//	private Boolean enabled;
+//
+//	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//	@JoinColumn(name = "user_id")
+//	private List<Role> roles;
 
 
 	public int getTelefono() {
@@ -53,29 +53,29 @@ public class Empleado implements Serializable {
 		this.telefono = telefono;
 	}
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public Boolean getEnabled() {
-		return enabled;
-	}
-
-	public void setEnabled(Boolean enabled) {
-		this.enabled = enabled;
-	}
-
-	public List<Role> getRoles() {
-		return roles;
-	}
-
-	public void setRoles(List<Role> roles) {
-		this.roles = roles;
-	}
+//	public String getPassword() {
+//		return password;
+//	}
+//
+//	public void setPassword(String password) {
+//		this.password = password;
+//	}
+//
+//	public Boolean getEnabled() {
+//		return enabled;
+//	}
+//
+//	public void setEnabled(Boolean enabled) {
+//		this.enabled = enabled;
+//	}
+//
+//	public List<Role> getRoles() {
+//		return roles;
+//	}
+//
+//	public void setRoles(List<Role> roles) {
+//		this.roles = roles;
+//	}
 
 	public Long getId() {
 		return id;
