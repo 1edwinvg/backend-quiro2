@@ -19,45 +19,45 @@ import org.springframework.web.bind.annotation.RestController;
 import com.edwin.backendquiro.models.entity.Empleado;
 import com.edwin.backendquiro.models.service.IEmpleadoService;
 
-@CrossOrigin(origins = { "http://localhost/:4200" })
+@CrossOrigin(origins = { "http://localhost:4200" })
 @RestController
 @RequestMapping("/api")
 public class EmpleadoController {
 	
 	@Autowired
-	private IEmpleadoService UsuarioService;
+	private IEmpleadoService empleadoService;
 	
-	@GetMapping("/usuarios")
+	@GetMapping("/empleados")
 	public List<Empleado> index() {
-		return UsuarioService.findAll();
+		return empleadoService.findAll();
 	}
-	@GetMapping("/usuarios/{id}")
+	@GetMapping("/empleados/{id}")
 	public Empleado show(@PathVariable Long id) {
-		return this.UsuarioService.findById(id);
+		return this.empleadoService.findById(id);
 	}
 	
-	@PostMapping("/usuarios")
+	@PostMapping("/empleados")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Empleado create(@RequestBody Empleado Usuario) {
 		Usuario.setCreateAt(new Date());
-		return UsuarioService.save(Usuario);
+		return empleadoService.save(Usuario);
 	}
 	
-	@PutMapping("/usuarios/update/{id}")
+	@PutMapping("/empleados/update/{id}")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Empleado update(@RequestBody Empleado cliente, @PathVariable Long id) {
-		Empleado currentUsuario = this.UsuarioService.findById(id);
+		Empleado currentUsuario = this.empleadoService.findById(id);
 		currentUsuario.setNombre(cliente.getNombre());
 		currentUsuario.setApellido(cliente.getApellido());
 		currentUsuario.setEmail(cliente.getEmail());
-		this.UsuarioService.save(currentUsuario);
+		this.empleadoService.save(currentUsuario);
 		return currentUsuario;
 	}
-	@DeleteMapping("/clientes/delete/{id}")
+	@DeleteMapping("/empleados/delete/{id}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void delete(@PathVariable Long id) {
-		Empleado currentUsuario = this.UsuarioService.findById(id);
-		this.UsuarioService.delete(currentUsuario);
+		Empleado currentUsuario = this.empleadoService.findById(id);
+		this.empleadoService.delete(currentUsuario);
 	}
 
 }
