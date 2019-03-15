@@ -36,7 +36,7 @@ public class EmpleadoController {
 		return this.empleadoService.findById(id);
 	}
 	
-	@PostMapping("/empleados")
+	@PostMapping("/empleados/create")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Empleado create(@RequestBody Empleado Usuario) {
 		Usuario.setCreateAt(new Date());

@@ -16,7 +16,7 @@ public class MyConfiguration {
 	            public void addCorsMappings(CorsRegistry registry) {
 	            	registry.addMapping("/api/**")
 	        		.allowedOrigins("http://localhost:4200")
-	        		.allowedMethods("GET", "POST","PUT", "DELETE")
+	        		.allowedMethods("GET", "POST","PUT", "DELETE","OPTIONS")
 	        			.allowedHeaders("header1", "header2", "header3")
 	        		.exposedHeaders("header1", "header2")
 	        		.allowCredentials(false).maxAge(3600);
