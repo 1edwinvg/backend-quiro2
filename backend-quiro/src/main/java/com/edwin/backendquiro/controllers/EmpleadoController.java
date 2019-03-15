@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.edwin.backendquiro.models.entity.Empleado;
 import com.edwin.backendquiro.models.service.IEmpleadoService;
 
-@CrossOrigin(origins = { "http://localhost:4200" })
+@CrossOrigin(origins = "http://localhost:4200" )
 @RestController
 @RequestMapping("/api")
 public class EmpleadoController {
