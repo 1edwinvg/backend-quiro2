@@ -2,7 +2,7 @@ INDEX VERSION 1.131+C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\.metadat
 1212378798.index
 783796855.index
 61522323.index
-19933254.index
+3204307233.index
 542237718.index
 3622161548.index
 394908079.index
@@ -10,7 +10,7 @@ INDEX VERSION 1.131+C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\.metadat
 4007707407.index
 443042674.index
 1952388078.index
-3492419194.index
+1389696189.index
 3122049149.index
 1151717247.index
 1467612984.index
@@ -97,8 +97,8 @@ INDEX VERSION 1.131+C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\.metadat
 2667499091.index
 471002784.index
 4018630759.index
-4163465922.index
 317704785.index
+4163465922.index
 406294985.index
 909058801.index
 1854343771.index
@@ -167,5 +167,5 @@ INDEX VERSION 1.131+C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\.metadat
 1026920625.index
 3340966884.index
 2126264802.index
-3204307233.index
-1389696189.index
+19933254.index
+3492419194.index

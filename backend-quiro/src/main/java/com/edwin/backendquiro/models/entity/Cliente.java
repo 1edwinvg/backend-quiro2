@@ -52,6 +52,8 @@ public class Cliente implements Serializable {
 	
 	@NotEmpty
 	private String dolencia;
+	
+	private String foto;
 
 	@NotNull
 	@Column(name = "create_at")
@@ -60,15 +62,15 @@ public class Cliente implements Serializable {
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date createAt;
 
-	@OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-	@JsonManagedReference
-	private List<Factura> facturas;
+//	@OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+//	@JsonManagedReference
+//	private List<Factura> facturas;
+//
+//	public Cliente() {
+//		facturas = new ArrayList<Factura>();
+//	}
 
-	public Cliente() {
-		facturas = new ArrayList<Factura>();
-	}
-
-	private String foto;
+	
 	
 	public int getEdad() {
 		return edad;
@@ -142,17 +144,17 @@ public class Cliente implements Serializable {
 		this.foto = foto;
 	}
 
-	public List<Factura> getFacturas() {
-		return facturas;
-	}
-
-	public void setFacturas(List<Factura> facturas) {
-		this.facturas = facturas;
-	}
-
-	public void addFactura(Factura factura) {
-		facturas.add(factura);
-	}
+//	public List<Factura> getFacturas() {
+//		return facturas;
+//	}
+//
+//	public void setFacturas(List<Factura> facturas) {
+//		this.facturas = facturas;
+//	}
+//
+//	public void addFactura(Factura factura) {
+//		facturas.add(factura);
+//	}
 
 	@Override
 	public String toString() {

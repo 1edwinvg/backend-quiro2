@@ -28,6 +28,15 @@ public class Empleado implements Serializable {
 	private String nombre;
 	private String apellido;
 	private String email;
+	private String tipoEmpleado;
+	public String getTipoEmpleado() {
+		return tipoEmpleado;
+	}
+
+	public void setTipoEmpleado(String tipoEmpleado) {
+		this.tipoEmpleado = tipoEmpleado;
+	}
+
 	private int telefono;
 	
 	@Column(name="create_at")

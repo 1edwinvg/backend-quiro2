@@ -53,7 +53,11 @@ INSERT INTO `authorities` (user_id, authority) VALUES (2,'ROLE_ADMIN');
 INSERT INTO `authorities` (user_id, authority) VALUES (2,'ROLE_USER');
 
 
-INSERT INTO empleados  (nombre, apellido, email, telefono, create_at) VALUES ('Edwin','Villa', 'eledwin@gmail.com', '954777777', '2017-08-23');
-INSERT INTO empleados  (nombre, apellido, email, telefono, create_at) VALUES ('Fran','Rivera', 'rivera@gmail.com', '954555555', '2019-01-23');
-INSERT INTO empleados  (nombre, apellido, email, telefono, create_at) VALUES ('Laura','García', 'laura@gmail.com', '954777777', '2018-02-23');
-INSERT INTO empleados  (nombre, apellido, email, telefono, create_at) VALUES ('Vanessa','Pérez', 'vane@gmail.com', '954111111', '2019-02-20');
+INSERT INTO empleados  (nombre, apellido, email, telefono, tipo_empleado, create_at) VALUES ('Edwin','Villa', 'eledwin@gmail.com', '954777777','masajista', '2017-08-23');
+INSERT INTO empleados  (nombre, apellido, email, telefono, tipo_empleado, create_at) VALUES ('Fran','Rivera', 'rivera@gmail.com', '954555555', 'practicante','2019-01-23');
+INSERT INTO empleados  (nombre, apellido, email, telefono, tipo_empleado, create_at) VALUES ('Laura','García garcia', 'laura@gmail.com', '954777777', 'masajista','2018-02-23');
+INSERT INTO empleados  (nombre, apellido, email, telefono, tipo_empleado, create_at) VALUES ('Vanessa','Pérez', 'vane@gmail.com', '954111111','practicante', '2019-02-20');
+INSERT INTO empleados  (nombre, apellido, email, telefono, tipo_empleado, create_at) VALUES ('Edu','Vi', 'ele@gmail.com', '954777777','masajista', '2017-08-23');
+INSERT INTO empleados  (nombre, apellido, email, telefono, tipo_empleado, create_at) VALUES ('Frana','Riv', 'riv@gmail.com', '954555555', 'practicante','2019-01-23');
+INSERT INTO empleados  (nombre, apellido, email, telefono, tipo_empleado, create_at) VALUES ('Lau','Gar', 'lau@gmail.com', '954777777', 'masajista','2018-02-23');
+INSERT INTO empleados  (nombre, apellido, email, telefono, tipo_empleado, create_at) VALUES ('Vanessa la mejor de todas','Péresozaaaaaaaalocaaaaaaa', 'vaneeeeeeee@gmail.com', '954111111','practicante', '2019-02-20');
