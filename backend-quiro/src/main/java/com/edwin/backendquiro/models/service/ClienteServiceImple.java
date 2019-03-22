@@ -6,11 +6,15 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.edwin.backendquiro.models.dao.IClienteDao;
 import com.edwin.backendquiro.models.entity.Cliente;
 //import com.edwin.backendquiro.models.entity.Usuario;
 
+import com.edwin.backendquiro.models.entity.Cliente;
+
+@Service
 public class ClienteServiceImple implements IClienteService {
 
 	@Autowired
@@ -31,17 +35,19 @@ public class ClienteServiceImple implements IClienteService {
 
 	@Override
 	@Transactional
-	public Cliente save(Cliente cliente) {
+	public Cliente save(Cliente clienteForm) {
 		
-//		user.setEnabled(true);
-//		user.setId(Usuario.getId());
-//		user.setPassword(passwordEncoder.encode(Usuario.getPassword()));
-//		List<Role> roles= new ArrayList<>();
-//		roles.add(new Role(user.getId(),"ROLE_USER"));
-//		user.setRoles(roles);
-//		user.setUsername(Usuario.getNombre());
-//		usuarioDao.save(user);
-		return this.clienteDao.save(cliente);
+//		Usuario user = new Usuario();
+
+		Cliente cliente = new Cliente();
+		cliente.setNombre(clienteForm.getNombre());
+		cliente.setApellido(clienteForm.getApellido());
+		cliente.setEdad(clienteForm.getEdad());
+		cliente.setEmail(clienteForm.getEmail());
+		cliente.setMovil(clienteForm.getMovil());
+		// fecha actual
+		cliente.setCreateAt(new Date());
+	return this.clienteDao.save(clienteForm);
 	};
 	
 

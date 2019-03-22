@@ -40,7 +40,8 @@ public class Cliente implements Serializable {
 
 	@NotEmpty
 	private String apellido;
-	@NotEmpty
+	
+	@NotNull
 	private int edad;
 
 	@NotEmpty
@@ -49,7 +50,6 @@ public class Cliente implements Serializable {
 	
 	@NotEmpty
 	private String movil;
-	
 	@NotEmpty
 	private String dolencia;
 	
