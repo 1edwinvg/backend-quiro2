@@ -53,6 +53,10 @@ public class ClienteController {
 		currentUsuario.setNombre(cliente.getNombre());
 		currentUsuario.setApellido(cliente.getApellido());
 		currentUsuario.setEmail(cliente.getEmail());
+		currentUsuario.setMovil(cliente.getMovil());
+		currentUsuario.setEdad(cliente.getEdad());
+		currentUsuario.setDolencia(cliente.getDolencia());
+		
 		this.clienteService.save(currentUsuario);
 		return currentUsuario;
 	}

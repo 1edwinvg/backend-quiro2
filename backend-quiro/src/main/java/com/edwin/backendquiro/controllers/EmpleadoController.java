@@ -45,11 +45,13 @@ public class EmpleadoController {
 	
 	@PutMapping("/empleados/update/{id}")
 	@ResponseStatus(HttpStatus.CREATED)
-	public Empleado update(@RequestBody Empleado cliente, @PathVariable Long id) {
+	public Empleado update(@RequestBody Empleado empleado, @PathVariable Long id) {
 		Empleado currentUsuario = this.empleadoService.findById(id);
-		currentUsuario.setNombre(cliente.getNombre());
-		currentUsuario.setApellido(cliente.getApellido());
-		currentUsuario.setEmail(cliente.getEmail());
+		currentUsuario.setNombre(empleado.getNombre());
+		currentUsuario.setApellido(empleado.getApellido());
+		currentUsuario.setEmail(empleado.getEmail());
+		currentUsuario.setTelefono(empleado.getTelefono());
+		currentUsuario.setTipoEmpleado(empleado.getTipoEmpleado());
 		this.empleadoService.save(currentUsuario);
 		return currentUsuario;
 	}
