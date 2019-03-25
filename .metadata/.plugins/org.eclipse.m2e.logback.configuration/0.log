@@ -4835,3 +4835,99 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2019-03-24 22:25:06,383 [Worker-561: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2019-03-24 22:25:06,435 [Worker-561: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-03-24 22:25:06,435 [Worker-561: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 11:39:45,574 [Worker-587: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 11:39:45,576 [Worker-587: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 11:39:45,592 [Worker-587: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-03-25 11:39:45,597 [Worker-587: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 11:39:45,629 [Worker-587: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 11:44:57,215 [Worker-582: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 11:44:57,236 [Worker-582: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 11:44:57,256 [Worker-582: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 11:44:57,278 [Worker-582: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 11:44:57,278 [Worker-582: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 11:46:07,586 [Worker-593: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2019-03-25 11:46:38,251 [Worker-593: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.edwin.backend-quiro:backend-quiro:0.0.1-SNAPSHOT @ C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\pom.xml.
+2019-03-25 11:46:54,526 [Worker-593: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /backend-quiro/src/main/java
+2019-03-25 11:46:54,541 [Worker-593: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /backend-quiro/src/main/resources
+2019-03-25 11:46:54,557 [Worker-593: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /backend-quiro/src/main/resources
+2019-03-25 11:46:54,558 [Worker-593: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /backend-quiro/src/test/java
+2019-03-25 11:46:55,967 [Worker-593: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 48 sec
+2019-03-25 11:47:08,091 [Worker-600: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 11:47:08,098 [Worker-600: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 11:47:08,197 [Worker-600: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 11:47:08,291 [Worker-600: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 11:47:08,311 [Worker-600: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 11:57:00,440 [Worker-607: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 11:57:00,449 [Worker-607: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 11:57:00,499 [Worker-607: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 11:57:00,518 [Worker-607: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 11:57:00,543 [Worker-607: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 12:12:05,294 [Worker-618: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:12:05,301 [Worker-618: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:12:05,474 [Worker-618: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:12:05,523 [Worker-618: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:12:05,523 [Worker-618: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 12:14:29,384 [Worker-619: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:14:29,387 [Worker-619: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:14:29,458 [Worker-619: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:14:29,463 [Worker-619: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:14:29,519 [Worker-619: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 12:14:40,684 [Worker-619: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:14:40,807 [Worker-619: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:14:40,867 [Worker-619: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:14:40,971 [Worker-619: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:14:40,971 [Worker-619: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 12:14:59,408 [Worker-620: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:14:59,412 [Worker-620: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:14:59,444 [Worker-620: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:14:59,465 [Worker-620: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:14:59,481 [Worker-620: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 12:16:11,585 [Worker-622: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:16:11,856 [Worker-622: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:16:12,095 [Worker-622: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:16:12,197 [Worker-622: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:16:12,252 [Worker-622: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 12:33:54,426 [Worker-619: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:33:54,431 [Worker-619: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:33:54,579 [Worker-619: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:33:54,621 [Worker-619: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:33:54,668 [Worker-619: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 12:37:17,885 [Worker-631: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:37:17,979 [Worker-631: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:37:18,188 [Worker-631: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:37:18,232 [Worker-631: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:37:18,233 [Worker-631: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 12:37:36,418 [Worker-632: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:37:36,421 [Worker-632: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:37:36,483 [Worker-632: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:37:36,545 [Worker-632: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:37:36,580 [Worker-632: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 12:39:24,376 [Worker-631: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:39:24,482 [Worker-631: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:39:24,599 [Worker-631: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:39:24,765 [Worker-631: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:39:24,802 [Worker-631: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 12:40:46,240 [Worker-632: Launching Executing clean in C__Users_villa_Documents_QuiroMasaje2_backend-quiro_backend-quiro] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro
+2019-03-25 12:40:46,244 [Worker-632: Launching Executing clean in C__Users_villa_Documents_QuiroMasaje2_backend-quiro_backend-quiro] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2019-03-25 12:41:10,838 [Worker-616: Launching Executing install in C__Users_villa_Documents_QuiroMasaje2_backend-quiro_backend-quiro] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro
+2019-03-25 12:41:10,947 [Worker-616: Launching Executing install in C__Users_villa_Documents_QuiroMasaje2_backend-quiro_backend-quiro] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2019-03-25 12:52:02,648 [Worker-635: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:52:02,684 [Worker-635: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:52:02,751 [Worker-635: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:52:02,756 [Worker-635: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:52:02,813 [Worker-635: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 12:54:35,511 [Worker-639: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:54:35,515 [Worker-639: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:54:35,554 [Worker-639: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:54:35,652 [Worker-639: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:54:35,691 [Worker-639: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 12:54:45,647 [Worker-638: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:54:45,651 [Worker-638: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:54:45,775 [Worker-638: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:54:45,838 [Worker-638: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:54:45,872 [Worker-638: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources
+2019-03-25 12:55:34,416 [Worker-639: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:55:34,457 [Worker-639: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:55:34,511 [Worker-639: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-03-25 12:55:34,542 [Worker-639: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-25 12:55:34,542 [Worker-639: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\villa\Documents\QuiroMasaje2\backend-quiro\backend-quiro\src\test\resources

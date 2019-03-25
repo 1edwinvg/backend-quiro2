@@ -49,27 +49,30 @@ import com.edwin.backendquiro.models.service.IFacturaService;
 
 @RestController
 @RequestMapping("/factura")
-//@SessionAttributes("factura")
+@SessionAttributes("factura")
 public class FacturaController {
 
 	@Autowired
 	private IClienteService clienteService;
 
 	@Autowired
-	private IFacturaService facturasServices;
+	private IFacturaService facturaServices;
 
 	private final Logger log = LoggerFactory.getLogger(getClass());
 
 	@Autowired
 	private IFacturaDao facturaDao;
-
+	
+	
+	// busca factura por id
 	@GetMapping("/ver/{id}")
 	public Factura ver(@PathVariable(value = "id") Long id) {
 
-		Factura factura = clienteService.bucarFacturaClienteItem(id); // clienteService.findFacturaById(id);
+		Factura factura = clienteService.bucarFacturaItem(id); // clienteService.findFacturaById(id);
 		return factura;
 	}
-
+	
+	// aqui se crea una factura
 	@GetMapping("/form/{clienteId}")
 	public Factura crear(@PathVariable(value = "clienteId") Long clienteId) {
 
@@ -79,7 +82,8 @@ public class FacturaController {
 		facturaDao.save(factura);
 		return factura;
 	}
-
+	
+	
 	@GetMapping("/cargar-productos/{term}")
 	public List<Producto> cargarProductos(@PathVariable String term) {
 		return clienteService.findByNombre(term);
@@ -112,32 +116,32 @@ public class FacturaController {
 
 	}
 
-	@GetMapping("/download/{id}")
-	public ResponseEntity<Resource> download(HttpServletRequest request, @PathVariable("id") Long id) {
-		FileInputStream fis = null;
-		try {
-			ServletContext context = request.getServletContext();
-			File file = facturasServices.getPdfFacturas(request.getLocale(), id);
-			String mimeType = context.getMimeType(file.getAbsolutePath());
-			if (mimeType == null) {
-				mimeType = "application/octet-stream";
-			}
-			HttpHeaders headers = new HttpHeaders();
-			headers.add("Access-Control-Allow-Origin", "*");
-			headers.add("Access-Control-Allow-Methods", "GET, POST, PUT");
-			headers.add("Access-Control-Allow-Headers", "Content-Type");
-			headers.add("Content-Disposition", "filename=" + file.getName());
-			headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
-			headers.add("Pragma", "no-cache");
-			headers.add("Expires", "0");
-			fis = new FileInputStream(file);
-			headers.setContentLength(file.length());
-
-			return ResponseEntity.ok().headers(headers).contentLength(file.length())
-					.contentType(MediaType.parseMediaType(mimeType)).body(new InputStreamResource(fis));
-		} catch (Exception e) {
-			return null;
-		}
-	}
+//	@GetMapping("/download/{id}")
+//	public ResponseEntity<Resource> download(HttpServletRequest request, @PathVariable("id") Long id) {
+//		FileInputStream fis = null;
+//		try {
+//			ServletContext context = request.getServletContext();
+//			File file = facturaServices.getPdfFacturas(request.getLocale(), id);
+//			String mimeType = context.getMimeType(file.getAbsolutePath());
+//			if (mimeType == null) {
+//				mimeType = "application/octet-stream";
+//			}
+//			HttpHeaders headers = new HttpHeaders();
+//			headers.add("Access-Control-Allow-Origin", "*");
+//			headers.add("Access-Control-Allow-Methods", "GET, POST, PUT");
+//			headers.add("Access-Control-Allow-Headers", "Content-Type");
+//			headers.add("Content-Disposition", "filename=" + file.getName());
+//			headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
+//			headers.add("Pragma", "no-cache");
+//			headers.add("Expires", "0");
+//			fis = new FileInputStream(file);
+//			headers.setContentLength(file.length());
+//
+//			return ResponseEntity.ok().headers(headers).contentLength(file.length())
+//					.contentType(MediaType.parseMediaType(mimeType)).body(new InputStreamResource(fis));
+//		} catch (Exception e) {
+//			return null;
+//		}
+//	}
 
 }

@@ -37,7 +37,7 @@ public class FacturaServiceImple implements IFacturaService{
 	@Override
 	public File getPdfFacturas(Locale locale, Long id) throws Exception {
 		
-		Factura factura = facturaDao.bucarFacturaCliente(id);
+		Factura factura = facturaDao.bucarFacturaClienteItem(id);
 		
 		Document document = new Document();
 		

@@ -106,8 +106,8 @@ public class ClienteServiceImple implements IClienteService {
 
 
 	@Override
-	public Factura bucarFacturaClienteItem(Long id) {
-		return facturaDao.bucarFacturaCliente(id);
+	public Factura bucarFacturaItem(Long id) {
+		return facturaDao.bucarFacturaClienteItem(id);
 	}
 	
 
