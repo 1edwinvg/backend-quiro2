@@ -35,14 +35,14 @@ INSERT INTO productos (nombre, precio, create_at) VALUES('Bianchi Bicicleta Aro 
 INSERT INTO productos (nombre, precio, create_at) VALUES('Mica Comoda 5 Cajones', 299990, NOW());
 
 /* Creamos algunas facturas */
-INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES('Factura equipos de oficina', null, 1, NOW());
-INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 1);
-INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(2, 1, 4);
-INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 5);
-INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 7);
-
-INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES('Factura Bicicleta', 'Alguna nota importante!', 1, NOW());
-INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(3, 2, 6);
+--INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES('Factura equipos de oficina', null, 1, NOW());
+--INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 1);
+--INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(2, 1, 4);
+--INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 5);
+--INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 7);
+--
+--INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES('Factura Bicicleta', 'Alguna nota importante!', 1, NOW());
+--INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(3, 2, 6);
 
 /* Creamos algunos usuarios con sus roles */
 INSERT INTO `users` (username, password, enabled) VALUES ('andres','$2a$10$O9wxmH/AeyZZzIS09Wp8YOEMvFnbRVJ8B4dmAMVSGloR62lj.yqXG',1);

@@ -29,7 +29,6 @@ public class EmpleadoServiceImple implements IEmpleadoService{
 //	private BCryptPasswordEncoder passwordEncoder;
 	
 	@Override
-	
 	public List<Empleado> findAll() {
 		
 		return (List<Empleado>) empleadoDao.findAll() ;
