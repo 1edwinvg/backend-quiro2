@@ -61,6 +61,25 @@ public class Cliente implements Serializable {
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date createAt;
+	
+//	@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+//	@JsonManagedReference
+//	private List<Factura> facturas;
+	
+	@OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<Factura> facturas;
+	
+	public Cliente() {
+		facturas = new ArrayList<Factura>();
+	}
+
+	public List<Factura> getFacturas() {
+		return facturas;
+	}
+
+	public void setFacturas(List<Factura> facturas) {
+		this.facturas = facturas;
+	}
 
 	public int getEdad() {
 		return edad;

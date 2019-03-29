@@ -8,8 +8,10 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.edwin.backendquiro.models.dao.IClienteDao;
+import com.edwin.backendquiro.models.dao.IFacturaDao;
 import com.edwin.backendquiro.models.dao.IProductoDao;
 import com.edwin.backendquiro.models.entity.Cliente;
+import com.edwin.backendquiro.models.entity.Factura;
 //import com.edwin.backendquiro.models.entity.Usuario;
 import com.edwin.backendquiro.models.entity.Producto;
 import com.edwin.backendquiro.models.entity.Cliente;
@@ -23,6 +25,8 @@ public class ClienteServiceImple implements IClienteService {
 	@Autowired
 	private IProductoDao productoDao;
 	
+	@Autowired
+	private IFacturaDao facturaDao;
 	
 
 //	@Autowired
@@ -68,5 +72,40 @@ public class ClienteServiceImple implements IClienteService {
 		return clienteDao.findById(id).orElse(null);
 	}
 
+	// FACTURAS
 	
+	@Override
+	@Transactional
+	public List<Producto> findByNombre(String term) {
+		return productoDao.findByNombreLikeIgnoreCase("%"+term+"%");
+	}
+	
+	@Override
+	@Transactional
+	public void saveFactura(Factura factura) {
+		facturaDao.save(factura);
+	}
+	
+	@Override
+	@Transactional
+	public Producto findProductoById(Long id) {
+		return productoDao.findById(id).orElse(null);
+	}
+	
+	@Override
+	@Transactional
+	public Factura findFacturaById(Long id) {
+		return facturaDao.findById(id).orElse(null);
+	}
+	@Override
+	@Transactional
+	public void deleteFactura(Long id) {
+		facturaDao.deleteById(id); // facturaDao.deleteById(id);
+	}
+
+	@Override
+	@Transactional
+	public Factura fetchFacturaByIdWithClienteWhithItemFacturaWithProducto(Long id) {
+		return facturaDao.fetchByIdWithClienteWhithItemFacturaWithProducto(id);
+	}
 }

@@ -1,5 +1,5 @@
 /* Populate tables */
-INSERT INTO clientes (nombre, apellido,edad, email, movil, dolencia, create_at, foto) VALUES('Andres', 'Guzman',15, 'profesor@bolsadeideas.com', '1111111','todas','2017-08-01', '');
+INSERT INTO clientes (nombre, apellido,edad, email, movil, dolencia, create_at, foto) VALUES('Andres', 'roballo',15, 'andres@andres.com', '1111111','todas','2017-08-01', '');
 INSERT INTO clientes (nombre, apellido,edad, email, movil, dolencia, create_at, foto) VALUES('John', 'Doe', 15,'john.doe@gmail.com','1111112','todas','2017-08-02', '');
 INSERT INTO clientes (nombre, apellido,edad, email, movil, dolencia, create_at, foto) VALUES('Linus', 'Torvalds', 15,'linus.torvalds@gmail.com','1111113','todas','2017-08-03', '');
 INSERT INTO clientes (nombre, apellido,edad, email, movil, dolencia, create_at, foto) VALUES('Jane', 'Doe', 15,'jane.doe@gmail.com', '1111114','todas','2017-08-04', '');
@@ -34,9 +34,13 @@ INSERT INTO productos (nombre, precio, create_at) VALUES('Hewlett Packard Multif
 INSERT INTO productos (nombre, precio, create_at) VALUES('Bianchi Bicicleta Aro 26', 69990, NOW());
 INSERT INTO productos (nombre, precio, create_at) VALUES('Mica Comoda 5 Cajones', 299990, NOW());
 
+insert into facturas (descripcion,cliente_id, create_at) VALUES("una descripcion de una factura", 1, now());
+insert into facturas (descripcion,cliente_id, create_at) VALUES("segunda factura", 1, now());
+insert into facturas (descripcion,cliente_id, create_at) VALUES("una descripcion de una factura", 2, now());
+
 /* Creamos algunas facturas */
 --INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES('Factura equipos de oficina', null, 1, NOW());
---INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 1);
+INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 1);
 --INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(2, 1, 4);
 --INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 5);
 --INSERT INTO facturas_items (cantidad, factura_id, producto_id) VALUES(1, 1, 7);
