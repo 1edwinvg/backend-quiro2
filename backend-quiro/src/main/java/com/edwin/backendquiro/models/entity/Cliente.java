@@ -25,6 +25,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 @Table(name = "clientes")
 public class Cliente implements Serializable {
@@ -40,20 +41,42 @@ public class Cliente implements Serializable {
 
 	@NotEmpty
 	private String apellido;
-	
+
 	@NotNull
 	private int edad;
 
 	@NotEmpty
 	@Email
 	private String email;
-	
+
 	@NotEmpty
 	private String movil;
+
 	@NotEmpty
 	private String dolencia;
-	
+
 	private String foto;
+
+	private Boolean existeCliente;
+
+	@Column(unique = true)
+	private String dni;
+
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+	public Boolean getExisteCliente() {
+		return existeCliente;
+	}
+
+	public void setExisteCliente(Boolean existeCliente) {
+		this.existeCliente = existeCliente;
+	}
 
 	@NotNull
 	@Column(name = "create_at")
@@ -61,14 +84,15 @@ public class Cliente implements Serializable {
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date createAt;
-	
+
 //	@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
 //	@JsonManagedReference
 //	private List<Factura> facturas;
-	
-	@OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+
+	@OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
+	@JsonManagedReference
 	private List<Factura> facturas;
-	
+
 	public Cliente() {
 		facturas = new ArrayList<Factura>();
 	}
@@ -88,7 +112,7 @@ public class Cliente implements Serializable {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
-	
+
 	public String getMovil() {
 		return movil;
 	}
@@ -159,5 +183,3 @@ public class Cliente implements Serializable {
 	}
 
 }
-
-

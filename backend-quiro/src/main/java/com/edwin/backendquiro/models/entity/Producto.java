@@ -13,8 +13,12 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "productos")
+@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" }) // para ignorar algunos fallos, json al sacar las
+																	// respuestas de la peticion
 public class Producto implements Serializable {
 
 	@Id
@@ -29,6 +33,15 @@ public class Producto implements Serializable {
 	@Column(name = "create_at")
 	private Date createAt;
 
+	private Boolean existe;
+
+	public Boolean getExiste() {
+		return existe;
+	}
+
+	public void setExiste(Boolean existe) {
+		this.existe = existe;
+	}
 
 	public Long getId() {
 		return id;
@@ -65,4 +78,3 @@ public class Producto implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 }
-

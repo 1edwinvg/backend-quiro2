@@ -11,18 +11,33 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "facturas_items")
 public class ItemFactura implements Serializable {
-
-	private static final long serialVersionUID = 1L;
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
-	private Integer cantidad;
 	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="factura_id")
+	@JsonIgnore
+	private Factura factura;
+	
+	public Factura getFactura() {
+		return factura;
+	}
+
+	public void setFactura(Factura factura) {
+		this.factura = factura;
+	}
+
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="producto_id")
 	private Producto producto;
@@ -34,13 +49,23 @@ public class ItemFactura implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
+	
+	private Integer cantidad;
+	
 	public Integer getCantidad() {
 		return cantidad;
 	}
 
 	public void setCantidad(Integer cantidad) {
 		this.cantidad = cantidad;
+	}
+	
+	/**
+	 * Calcula el total del precio un producto en funcion de la cantidad
+	 * @return
+	 */
+	public Double calcularImporte() {
+		return cantidad.doubleValue() * producto.getPrecio();
 	}
 
 	public Producto getProducto() {
@@ -50,11 +75,5 @@ public class ItemFactura implements Serializable {
 	public void setProducto(Producto producto) {
 		this.producto = producto;
 	}
-
-	public Double calcularImporte() {
-		return cantidad.doubleValue() * producto.getPrecio();
-	}
 	
-
-
 }
