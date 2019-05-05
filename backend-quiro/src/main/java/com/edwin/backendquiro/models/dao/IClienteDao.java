@@ -13,4 +13,9 @@ public interface IClienteDao extends JpaRepository<Cliente, Long> {
 	@Query("select c from Cliente c left join fetch c.facturas f where c.id=?1")
 	public Cliente fetchByIdWithFacturas(Long id);
 	
+	@Query("select c from Cliente c where c.nombre=?1")
+	public Cliente findByName(String nombre);
+	
+	
+	
 }

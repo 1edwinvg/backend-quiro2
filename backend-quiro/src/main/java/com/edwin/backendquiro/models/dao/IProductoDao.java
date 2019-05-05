@@ -13,5 +13,10 @@ public interface IProductoDao extends JpaRepository<Producto, Long>{
 	@Query("select p from Producto p where p.nombre like %?1%")
 	public List<Producto> findByNombre(String term);
 	
+	@Query("select p from Producto p where p.nombre = ?1")
+	public List<Producto> findByNombreCrear(String term);
+	
 	public List<Producto> findByNombreLikeIgnoreCase(String term);
+	
+	
 }

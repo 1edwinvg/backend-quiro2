@@ -36,4 +36,21 @@ public class ProductoServiceImple implements IProductoService {
 		
 	}
 
+	@Override
+	public List<Producto> findByNombre(String term) {
+		return this.productoDao.findByNombre(term);
+	}
+
+	@Override
+	public List<Producto> findByNombreCrear(String term) {
+		return this.productoDao.findByNombreCrear(term);
+	}
+
+	@Override
+	public List<Producto> findByNombreLikeIgnoreCase(String term) {
+		
+		return this.productoDao.findByNombreLikeIgnoreCase(term);
+	}
+	
+
 }

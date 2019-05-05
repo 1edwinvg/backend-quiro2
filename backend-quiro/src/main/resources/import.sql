@@ -26,12 +26,12 @@ INSERT INTO clientes (nombre, apellido, edad, email, movil, dolencia, create_at,
 INSERT INTO clientes (nombre, apellido, edad, email, movil, dolencia, create_at, foto, existe_cliente, dni) VALUES('Richard', 'Roe', 15,'stiles.roe@gmail.com', '1111114','todas','2017-08-25', '', true, "987654321r");
 
 /* Populate tabla productos */
-INSERT INTO productos (nombre, precio, create_at, existe) VALUES('Panasonic Pantalla LCD', 259990, NOW(), false);
-INSERT INTO productos (nombre, precio, create_at, existe) VALUES('Sony Camara digital DSC-W320B', 123490, NOW(), true);
+INSERT INTO productos (nombre, precio, create_at, existe) VALUES('Panasonic Pantalla LCD', 259990, NOW(), true);
+INSERT INTO productos (nombre, precio, create_at, existe) VALUES('Sony Camara digital DSC-W320B', 123490, NOW(), false);
 INSERT INTO productos (nombre, precio, create_at, existe) VALUES('Apple iPod shuffle', 1499990, NOW(), true);
 INSERT INTO productos (nombre, precio, create_at, existe) VALUES('Sony Notebook Z110', 37990, NOW(), true);
 INSERT INTO productos (nombre, precio, create_at, existe) VALUES('Hewlett Packard Multifuncional F2280', 69990, NOW(), true);
-INSERT INTO productos (nombre, precio, create_at, existe) VALUES('Bianchi Bicicleta Aro 26', 69990, NOW(), false);
+INSERT INTO productos (nombre, precio, create_at, existe) VALUES('Bianchi Bicicleta Aro 26', 69990, NOW(), true);
 INSERT INTO productos (nombre, precio, create_at, existe) VALUES('Mica Comoda 5 Cajones', 299990, NOW(), true);
 
 insert into facturas (descripcion, observacion, cliente_id, create_at) VALUES("una descripcion de una factura","Observación: una observacion oportuna", 1, now());

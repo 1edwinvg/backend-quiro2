@@ -13,6 +13,8 @@ public interface IClienteService {
 	public Cliente save(Cliente cliente);
 
 	public Cliente findById(Long id);
+	
+	public Cliente findByName(String name);
 
 	public void delete(Cliente cliente);
 

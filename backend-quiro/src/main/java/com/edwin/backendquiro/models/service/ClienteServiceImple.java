@@ -61,6 +61,11 @@ public class ClienteServiceImple implements IClienteService {
 	public Cliente findById(Long id) {
 		return clienteDao.findById(id).orElse(null);
 	}
+	
+	@Override
+	public Cliente findByName(String id) {
+		return clienteDao.findByName(id);
+	}
 
 	@Override
 	public void delete(Cliente Usuario) {

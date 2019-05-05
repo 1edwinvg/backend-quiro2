@@ -53,6 +53,7 @@ public class ClienteController {
 	public Cliente create(@RequestBody Cliente cliente) {
 
 		cliente.setCreateAt(new Date());
+		cliente.setExisteCliente(true);
 		return clienteService.save(cliente);
 	}
 
