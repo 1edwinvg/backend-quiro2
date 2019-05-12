@@ -1,7 +1,6 @@
 package com.edwin.backendquiro.models.entity;
 
 import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -24,12 +23,18 @@ public class ItemFactura implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="factura_id")
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "factura_id")
 	@JsonIgnore
 	private Factura factura;
 	
+	private Integer cantidad;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "producto_id")
+	private Producto producto;
+
 	public Factura getFactura() {
 		return factura;
 	}
@@ -38,10 +43,6 @@ public class ItemFactura implements Serializable {
 		this.factura = factura;
 	}
 
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="producto_id")
-	private Producto producto;
-
 	public Long getId() {
 		return id;
 	}
@@ -49,9 +50,9 @@ public class ItemFactura implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	
-	private Integer cantidad;
-	
+
 	public Integer getCantidad() {
 		return cantidad;
 	}
@@ -59,9 +60,10 @@ public class ItemFactura implements Serializable {
 	public void setCantidad(Integer cantidad) {
 		this.cantidad = cantidad;
 	}
-	
+
 	/**
 	 * Calcula el total del precio un producto en funcion de la cantidad
+	 * 
 	 * @return
 	 */
 	public Double calcularImporte() {
@@ -75,5 +77,5 @@ public class ItemFactura implements Serializable {
 	public void setProducto(Producto producto) {
 		this.producto = producto;
 	}
-	
+
 }

@@ -3,10 +3,23 @@ package com.edwin.backendquiro.models.entity;
 import java.util.List;
 
 public class FacturaMvc {
+	
+	private Long idCliente;
 
 	private String descripcion;
 
 	private String observacion;
+
+	private List<ItemFacturaMvc> items;
+	
+	public Long getIdCliente() {
+		return idCliente;
+	}
+
+	public void setIdCliente(Long idCliente) {
+		this.idCliente = idCliente;
+	}
+
 
 	public String getObservacion() {
 		return observacion;
@@ -15,8 +28,6 @@ public class FacturaMvc {
 	public void setObservacion(String observacion) {
 		this.observacion = observacion;
 	}
-
-	private List<ItemFacturaMvc> items;
 
 	public String getDescripcion() {
 		return descripcion;

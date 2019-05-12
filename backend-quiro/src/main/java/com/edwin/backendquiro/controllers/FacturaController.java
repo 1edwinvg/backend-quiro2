@@ -73,12 +73,12 @@ public class FacturaController {
 	 * necesitamos asignar a un cliente una factura. Lo identificamos por el id de
 	 * la url
 	 */
-	@PostMapping("/facturas/create/{id}")
+	@PostMapping("/facturas/create")
 	@ResponseStatus(HttpStatus.CREATED)
-	public Factura create(@RequestBody FacturaMvc facturaMvc, @PathVariable Long id) {
+	public Factura create(@RequestBody FacturaMvc facturaMvc) {
 		Factura factura = new Factura();
 		// busca el cliente al que vamos a asignar la factura
-		Cliente cliente = this.clienteService.findById(id);
+		Cliente cliente = this.clienteService.findById(facturaMvc.getIdCliente());
 		factura.setDescripcion(facturaMvc.getDescripcion());
 		factura.setObservacion(facturaMvc.getObservacion());
 		factura.setCliente(cliente);
