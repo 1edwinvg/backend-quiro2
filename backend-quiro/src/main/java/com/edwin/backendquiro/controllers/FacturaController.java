@@ -1,5 +1,6 @@
 package com.edwin.backendquiro.controllers;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -68,7 +69,11 @@ public class FacturaController {
 		Factura factura = this.clienteService.fetchFacturaByIdWithClienteWhithItemFacturaWithProducto(id);
 		return factura;
 	}
-
+	
+	@GetMapping("/clientefactura/{id}")
+	public List<Factura> listaFacturaCliente(@PathVariable Long id){
+		return this.facturaDao.FacturaCliente(id);
+	}
 	/*
 	 * necesitamos asignar a un cliente una factura. Lo identificamos por el id de
 	 * la url
@@ -83,6 +88,7 @@ public class FacturaController {
 		factura.setObservacion(facturaMvc.getObservacion());
 		factura.setCliente(cliente);
 		factura.setCreateAt(new Date());
+//		factura.setFecha(facturaMvc.getFecha());
 		// insertamos y tenemos el objeto de nuevo
 		factura = this.facturaDao.save(factura);
 
@@ -99,6 +105,8 @@ public class FacturaController {
 		
 		return factura;
 	}
+	
+	
 
 	/**
 	 * ACTUALIZA SOLO LOS DATOS DE UNA FACTURA, NO LOS ITEMS

@@ -42,15 +42,12 @@ public class Cliente implements Serializable {
 	@NotEmpty
 	private String apellido;
 
-	@NotNull
-	private int edad;
-
 	@NotEmpty
 	@Email
 	private String email;
 
-	@NotEmpty
-	private String movil;
+	@NotNull
+	private int movil;
 
 	@NotEmpty
 	private String dolencia;
@@ -61,23 +58,15 @@ public class Cliente implements Serializable {
 
 	@Column(unique = true)
 	private String dni;
-
-	public String getDni() {
-		return dni;
-	}
-
-	public void setDni(String dni) {
-		this.dni = dni;
-	}
-
-	public Boolean getExisteCliente() {
-		return existeCliente;
-	}
-
-	public void setExisteCliente(Boolean existeCliente) {
-		this.existeCliente = existeCliente;
-	}
-
+	
+	@NotNull
+	@Column(name = "edad")
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	// el siguiente es el formato que se espera
+	@JsonFormat(pattern = "yyyy-MM-dd")
+	private Date edad;
+	
 	@NotNull
 	@Column(name = "create_at")
 	@Temporal(TemporalType.DATE)
@@ -97,6 +86,24 @@ public class Cliente implements Serializable {
 		facturas = new ArrayList<Factura>();
 	}
 
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+	public Boolean getExisteCliente() {
+		return existeCliente;
+	}
+
+	public void setExisteCliente(Boolean existeCliente) {
+		this.existeCliente = existeCliente;
+	}
+
+	
+
 	public List<Factura> getFacturas() {
 		return facturas;
 	}
@@ -105,19 +112,21 @@ public class Cliente implements Serializable {
 		this.facturas = facturas;
 	}
 
-	public int getEdad() {
+	
+
+	public Date getEdad() {
 		return edad;
 	}
 
-	public void setEdad(int edad) {
+	public void setEdad(Date edad) {
 		this.edad = edad;
 	}
 
-	public String getMovil() {
+	public int getMovil() {
 		return movil;
 	}
 
-	public void setMovil(String movil) {
+	public void setMovil(int movil) {
 		this.movil = movil;
 	}
 

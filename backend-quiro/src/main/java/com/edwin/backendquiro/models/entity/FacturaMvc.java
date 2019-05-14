@@ -1,5 +1,6 @@
 package com.edwin.backendquiro.models.entity;
 
+import java.util.Date;
 import java.util.List;
 
 public class FacturaMvc {
@@ -9,6 +10,26 @@ public class FacturaMvc {
 	private String descripcion;
 
 	private String observacion;
+
+	private Date createAt;
+	
+//	public Date getCreateAt() {
+//		return createAt;
+//	}
+//	private Date fecha;
+//
+//	public Date getFecha() {
+//		return fecha;
+//	}
+
+//	public void setFecha(Date fecha) {
+//		this.fecha = fecha;
+//	}
+
+	public void setCreateAt(Date createAt) {
+		this.createAt = createAt;
+	}
+	
 
 	private List<ItemFacturaMvc> items;
 	

@@ -50,8 +50,23 @@ public class Factura implements Serializable {
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
 	@JoinColumn(name = "factura_id")
 	private List<ItemFactura> items;
-
 	
+//	@NotNull
+//	@Column(name = "fecha")
+//	@Temporal(TemporalType.DATE)
+//	@DateTimeFormat(pattern = "yyyy-MM-dd hh:mm")
+//	// el siguiente es el formato que se espera
+//	@JsonFormat(pattern = "yyyy-MM-dd hh:mm")
+//	private Date fecha;
+//
+//
+//	public Date getFecha() {
+//		return fecha;
+//	}
+//
+//	public void setFecha(Date fecha) {
+//		this.fecha = fecha;
+//	}
 
 	@NotNull
 	@Column(name = "create_at")

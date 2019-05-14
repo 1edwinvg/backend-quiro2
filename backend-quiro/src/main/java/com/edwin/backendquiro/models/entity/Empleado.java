@@ -16,6 +16,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "empleados")
@@ -24,19 +27,18 @@ public class Empleado implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	
+//	@Column(unique = true)
+	private String dni;
+	@NotEmpty
 	private String nombre;
+	@NotEmpty
 	private String apellido;
+	@NotEmpty
+	@Email
 	private String email;
 	private String tipoEmpleado;
-	public String getTipoEmpleado() {
-		return tipoEmpleado;
-	}
-
-	public void setTipoEmpleado(String tipoEmpleado) {
-		this.tipoEmpleado = tipoEmpleado;
-	}
-
+	
+	@NotNull
 	private int telefono;
 	
 	@Column(name="create_at")
@@ -53,6 +55,21 @@ public class Empleado implements Serializable {
 //	@JoinColumn(name = "user_id")
 //	private List<Role> roles;
 
+	public String getTipoEmpleado() {
+		return tipoEmpleado;
+	}
+
+	public void setTipoEmpleado(String tipoEmpleado) {
+		this.tipoEmpleado = tipoEmpleado;
+	}
+
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
 
 	public int getTelefono() {
 		return telefono;

@@ -39,11 +39,15 @@ public class EmpleadoServiceImple implements IEmpleadoService{
 	public Empleado save(Empleado usuario) {
 		Usuario user = new Usuario();
 		Empleado Usuario = new Empleado();
+		Usuario.setDni(usuario.getDni());
 		Usuario.setApellido(usuario.getApellido());
 		Usuario.setCreateAt(new Date());
 		Usuario.setEmail(usuario.getEmail());
 		Usuario.setNombre(usuario.getNombre());
+		Usuario.setTelefono(usuario.getTelefono());
+		Usuario.setTipoEmpleado(usuario.getTipoEmpleado());
 		Usuario = empleadoDao.save(Usuario);
+		
 //		user.setEnabled(true);
 //		user.setId(Usuario.getId());
 //		user.setPassword(passwordEncoder.encode(Usuario.getPassword()));

@@ -1,8 +1,13 @@
 package com.edwin.backendquiro.controllers;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,6 +23,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.edwin.backendquiro.models.entity.Cliente;
+import com.edwin.backendquiro.models.entity.ClienteEdad;
 import com.edwin.backendquiro.models.service.IClienteService;
 
 @CrossOrigin(origins = "http://localhost:4200")
@@ -25,6 +31,8 @@ import com.edwin.backendquiro.models.service.IClienteService;
 @RequestMapping("/api")
 public class ClienteController {
 
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+	
 	@Autowired
 	private IClienteService clienteService;
 
@@ -88,6 +96,73 @@ public class ClienteController {
 	public void delete(@PathVariable Long id) {
 		Cliente currentUsuario = this.clienteService.findById(id);
 		this.clienteService.delete(currentUsuario);
+	}
+	
+	@GetMapping("/clientesdetalle/{id}")
+	public ClienteEdad obtenerEdad(@PathVariable Long id, ClienteEdad clienteEdad, Cliente cliente) {
+
+		cliente = this.clienteService.findById(id);
+		clienteEdad.setDni(cliente.getDni());
+		clienteEdad.setNombre(cliente.getNombre());
+		clienteEdad.setApellido(cliente.getApellido());
+		clienteEdad.setEmail(cliente.getEmail());
+		clienteEdad.setMovil(cliente.getMovil());
+		clienteEdad.setDolencia(cliente.getDolencia());
+		// transforma tipo Date a String
+		String date = new SimpleDateFormat("yyyy-MM-dd").format(cliente.getEdad());
+		// seteamos la edad a partir de la funcion
+		logger.info("\n FECHA STRING : " + date);
+		clienteEdad.setEdad(this.calcularEdadCliente(date));
+		return clienteEdad;
+	}
+	
+	
+	public int calcularEdadCliente(Calendar fechaNac) {
+		Calendar fechaActual = Calendar.getInstance();
+
+		// Cálculo de las diferencias.
+		int anios = fechaActual.get(Calendar.YEAR) - fechaNac.get(Calendar.YEAR);
+		int months = fechaActual.get(Calendar.MONTH) - fechaNac.get(Calendar.MONTH);
+		int days = fechaActual.get(Calendar.DAY_OF_MONTH) - fechaNac.get(Calendar.DAY_OF_MONTH);
+
+		// Si aun no ha sido su cumpleaños, hay que restar 1 o es el mes pero no ha
+		// llegado el día.
+
+		if (months < 0 || (months == 0 && days < 0)) {
+			anios--;
+		}
+		return anios;
+	}
+
+	public int calcularEdadCliente(String fecha) {
+		Calendar fechaActual = Calendar.getInstance();
+		Calendar fechaNacimiento = Calendar.getInstance();
+		// String date = new
+		// SimpleDateFormat("yyyy/MM/dd").format(cliente.getCreateAt());
+		String[] fechaArray = fecha.split("-");
+		// solo para probar el split
+		for (int i = 0; i < fechaArray.length; i++) {
+			System.out.println((fechaArray[i]));
+		}
+		int anio = Integer.parseInt(fechaArray[0]);
+		int mes = Integer.parseInt(fechaArray[1]);
+		int dia = Integer.parseInt(fechaArray[2]);
+
+		// asignamos valores a Calendar de acuerdo al formato que teniamos en le Entity
+		// cliente.createAt
+		fechaNacimiento.set(anio, mes, dia);
+		// Cálculo de las diferencias.
+		int years = fechaActual.get(Calendar.YEAR) - fechaNacimiento.get(Calendar.YEAR);
+		int months = fechaActual.get(Calendar.MONTH) - fechaNacimiento.get(Calendar.MONTH);
+		int days = fechaActual.get(Calendar.DAY_OF_MONTH) - fechaNacimiento.get(Calendar.DAY_OF_MONTH);
+
+		// Si aun no ha sido su cumpleaños, hay que restar 1 o es el mes pero no ha
+		// llegado el día.
+
+		if (months < 0 || (months == 0 && days < 0)) {
+			years--;
+		}
+		return years;
 	}
 
 }

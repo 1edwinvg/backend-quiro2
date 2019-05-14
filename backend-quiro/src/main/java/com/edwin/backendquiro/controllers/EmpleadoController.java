@@ -51,7 +51,6 @@ public class EmpleadoController {
 		currentUsuario.setApellido(empleado.getApellido());
 		currentUsuario.setEmail(empleado.getEmail());
 		currentUsuario.setTelefono(empleado.getTelefono());
-		currentUsuario.setTipoEmpleado(empleado.getTipoEmpleado());
 		this.empleadoService.save(currentUsuario);
 		return currentUsuario;
 	}
